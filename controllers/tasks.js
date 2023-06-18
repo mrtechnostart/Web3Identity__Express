@@ -11,9 +11,12 @@ const postDetails = async(req,res)=>{
 }
 
 const getRequest = async(req,res)=>{
-    
+    res.json({
+        success:true
+    })
 }
 
 module.exports = {
-    postDetails
+    postDetails,
+    getRequest
 }
