@@ -11,7 +11,7 @@ const postDetails = async(req,res)=>{
 }
 
 const getRequest = async(req,res)=>{
-    try{
+    try{ 
         const tasks = await Addr.find({})
         res.status(200).json({tasks})
     }
@@ -19,6 +19,19 @@ const getRequest = async(req,res)=>{
         res.status(500).json({e})
     }
 }
+
+const getChainData = async(req,res)=>{
+    try{
+const {id:chainId} = req.params
+        const tasks = await Addr.find({chainId:chainId})
+        res.status(200).json({tasks})
+    }
+    catch(e){
+        res.status(500).json({e})
+    }
+}
+
+
 const getTask = async (req, res) => {
   try{
     const {id:taskID} = req.params
@@ -37,5 +50,6 @@ const getTask = async (req, res) => {
 module.exports = {
     postDetails,
     getRequest,
-    getTask
+    getTask,
+getChainData
 }

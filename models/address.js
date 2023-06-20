@@ -7,9 +7,9 @@ const AddressSchema = new mongoose.Schema({
         trim:true,
         maxLength:[45,"Max Length Reached"]
     },
-    contract:{
+    chainId:{
         type:String,
-        required:[true,"Must Provide Deployer Address"],
+        required:[true,"Must Provide ChainId Address"],
         trim:true,
         maxLength:[45,"Max Length Reached"]
     },
