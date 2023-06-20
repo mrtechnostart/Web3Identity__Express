@@ -17,7 +17,7 @@ const AddressSchema = new mongoose.Schema({
         type:String,
         required:[true,"Must Provide Name"],
         trim:true,
-        maxLength:[20,"Max Length Reached"]
+        maxLength:[40,"Max Length Reached"]
     }
 })
 
